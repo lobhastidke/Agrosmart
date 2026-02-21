@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSmart - The Future of Agriculture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- LANDING PAGE -->
+    <div class="landing-page">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <video autoplay muted loop id="heroVideo" class="hero-video">
+                <source src="I_want_you_202602172208_kkerf.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-logo animate-fade-in-down">
+                    <i class="fas fa-seedling"></i>
+                    <span>AgroSmart</span>
+                </div>
+                <h1 class="hero-title animate-fade-in-up">Revolutionizing Agriculture with Data & AI</h1>
+                <p class="hero-subtitle animate-fade-in-up delay-1">Empowering farmers with real-time insights, market
+                    trends, and smart crop management.</p>
+                <div class="hero-buttons animate-fade-in-up delay-2">
+                    <a href="login.html" class="btn-hero btn-primary-hero">Get Started <i
+                            class="fas fa-arrow-right"></i></a>
+                    <a href="#features" class="btn-hero btn-secondary-hero">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div id="features" class="section features-section">
+            <div class="container">
+                <h2 class="section-title text-center" data-aos="fade-up">Why Choose AgroSmart?</h2>
+                <p class="section-subtitle text-center" data-aos="fade-up">Comprehensive tools designed for the modern
+                    farmer.</p>
+
+                <div class="features-grid">
+                    <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Market Analysis</h3>
+                        <p>Real-time market prices and demand trends to help you sell at the right time.</p>
+                    </div>
+
+                    <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-cloud-sun-rain"></i>
+                        </div>
+                        <h3>Weather Insights</h3>
+                        <p>Precise weather forecasts and alerts to protect your crops from unpredictable conditions.</p>
+                    </div>
+
+                    <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI Recommendations</h3>
+                        <p>Smart crop suggestions based on your soil type, season, and location.</p>
+                    </div>
+
+                    <div class="feature-box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3>Profit Calculator</h3>
+                        <p>Calculate meaningful profit estimates before you even plant a seed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About/Impact Section -->
+        <div class="section impact-section">
+            <div class="container impact-container">
+                <div class="impact-content" data-aos="fade-right">
+                    <h2>Empowering The Indian Farmer</h2>
+                    <p>AgroSmart bridges the gap between technology and tradition. We provide accessible,
+                        easy-to-understand data that aids in decision-making, ensuring sustainability and profitability
+                        for every harvest.</p>
+                    <ul class="impact-list">
+                        <li><i class="fas fa-check-circle"></i> Data-driven decision making</li>
+                        <li><i class="fas fa-check-circle"></i> Access to government schemes</li>
+                        <li><i class="fas fa-check-circle"></i> Community support & expert advice</li>
+                    </ul>
+                    <a href="login.html" class="btn-hero btn-primary-hero mt-20">Join the Revolution</a>
+                </div>
+                <div class="impact-image" data-aos="fade-left">
+                    <!-- Placeholder for an image, or use an icon composition -->
+                    <div class="impact-icon-wrapper">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="landing-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i> AgroSmart
+                    </div>
+                    <p>&copy; 2026 AgroSmart Inc. All rights reserved.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scroll Animation Script (Simple Intersection Observer) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('[data-aos]').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>
