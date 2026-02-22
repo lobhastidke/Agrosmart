@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="landing_title">AgroSmart - The Future of Agriculture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .lang-switcher-landing {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn-landing {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn-landing.active {
+            background: #2e7d32;
+            border-color: #2e7d32;
+            color: white;
+        }
+
+        .lang-btn-landing:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher-landing">
+        <button class="lang-btn-landing active" onclick="changeLandingLanguage('en')" id="btn-en">EN</button>
+        <button class="lang-btn-landing" onclick="changeLandingLanguage('mr')" id="btn-mr">मराठी</button>
+        <button class="lang-btn-landing" onclick="changeLandingLanguage('hi')" id="btn-hi">हिन्दी</button>
+    </div>
+
+    <!-- LANDING PAGE -->
+    <div class="landing-page">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <video autoplay muted loop id="heroVideo" class="hero-video">
+                <source src="WhatsApp Video 2026-02-22 at 5.40.43 AM.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-logo animate-fade-in-down">
+                    <i class="fas fa-seedling"></i>
+                    <span>AgroSmart</span>
+                </div>
+                <h1 class="hero-title animate-fade-in-up" data-translate="hero_title">Revolutionizing Agriculture with
+                    Data & AI</h1>
+                <p class="hero-subtitle animate-fade-in-up delay-1" data-translate="hero_subtitle">Empowering farmers
+                    with real-time insights, market
+                    trends, and smart crop management.</p>
+                <div class="hero-buttons animate-fade-in-up delay-2" style="display: flex; justify-content: center;">
+                    <a href="login.html" class="btn-hero btn-primary-hero" data-translate="btn_get_started">Get Started
+                        <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div id="features" class="section features-section">
+            <div class="container">
+                <h2 class="section-title text-center" data-aos="fade-up" data-translate="section_why_agrosmart">Why
+                    Choose AgroSmart?</h2>
+                <p class="section-subtitle text-center" data-aos="fade-up" data-translate="section_why_desc">
+                    Comprehensive tools designed for the modern
+                    farmer.</p>
+
+                <div class="features-grid">
+                    <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 data-translate="feature_market">Market Analysis</h3>
+                        <p data-translate="feature_market_desc">Real-time market prices and demand trends to help you
+                            sell at the right time.</p>
+                    </div>
+
+                    <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-cloud-sun-rain"></i>
+                        </div>
+                        <h3 data-translate="feature_weather">Weather Insights</h3>
+                        <p data-translate="feature_weather_desc">Precise weather forecasts and alerts to protect your
+                            crops from unpredictable conditions.</p>
+                    </div>
+
+                    <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 data-translate="feature_ai">AI Recommendations</h3>
+                        <p data-translate="feature_ai_desc">Smart crop suggestions based on your soil type, season, and
+                            location.</p>
+                    </div>
+
+                    <div class="feature-box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3 data-translate="feature_calc">Profit Calculator</h3>
+                        <p data-translate="feature_calc_desc">Calculate meaningful profit estimates before you even
+                            plant a seed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About/Impact Section -->
+        <div class="section impact-section">
+            <div class="container impact-container">
+                <div class="impact-content" data-aos="fade-right">
+                    <h2 data-translate="impact_title">Empowering The Indian Farmer</h2>
+                    <p data-translate="impact_desc">AgroSmart bridges the gap between technology and tradition. We
+                        provide accessible,
+                        easy-to-understand data that aids in decision-making, ensuring sustainability and profitability
+                        for every harvest.</p>
+                    <ul class="impact-list">
+                        <li><i class="fas fa-check-circle"></i> <span data-translate="impact_list_1">Data-driven
+                                decision making</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-translate="impact_list_2">Access to
+                                government schemes</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-translate="impact_list_3">Community support &
+                                expert advice</span></li>
+                    </ul>
+                    <a href="login.html" class="btn-hero btn-primary-hero mt-20" data-translate="btn_join">Join the
+                        Revolution</a>
+                </div>
+                <div class="impact-image" data-aos="fade-left">
+                    <div class="impact-icon-wrapper">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="landing-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i> AgroSmart
+                    </div>
+                    <p data-translate="footer_copyright">© 2026 AgroSmart Inc. All rights reserved.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Multi-Language Script -->
+    <script>
+        const translations = {
+            en: {
+                "landing_title": "AgroSmart - The Future of Agriculture",
+                "hero_title": "Revolutionizing Agriculture with Data & AI",
+                "hero_subtitle": "Empowering farmers with real-time insights, market trends, and smart crop management.",
+                "btn_get_started": "Get Started",
+                "btn_learn_more": "Learn More",
+                "section_why_agrosmart": "Why Choose AgroSmart?",
+                "section_why_desc": "Comprehensive tools designed for the modern farmer.",
+                "feature_market": "Market Analysis",
+                "feature_market_desc": "Real-time market prices and demand trends to help you sell at the right time.",
+                "feature_weather": "Weather Insights",
+                "feature_weather_desc": "Precise weather forecasts and alerts to protect your crops from unpredictable conditions.",
+                "feature_ai": "AI Recommendations",
+                "feature_ai_desc": "Smart crop suggestions based on your soil type, season, and location.",
+                "feature_calc": "Profit Calculator",
+                "feature_calc_desc": "Calculate meaningful profit estimates before you even plant a seed.",
+                "impact_title": "Empowering The Indian Farmer",
+                "impact_desc": "AgroSmart bridges the gap between technology and tradition. We provide accessible, easy-to-understand data that aids in decision-making, ensuring sustainability and profitability for every harvest.",
+                "impact_list_1": "Data-driven decision making",
+                "impact_list_2": "Access to government schemes",
+                "impact_list_3": "Community support & expert advice",
+                "btn_join": "Join the Revolution",
+                "footer_copyright": "© 2026 AgroSmart Inc. All rights reserved."
+            },
+            mr: {
+                "landing_title": "अॅग्रोस्मार्ट - शेतीचे भविष्य",
+                "hero_title": "डेटा आणि AI सह शेतीमध्ये क्रांती",
+                "hero_subtitle": "रिअल-टाइम इनसाइट्स, बाजार ट्रेंड आणि स्मार्ट पीक व्यवस्थापनासह शेतकऱ्यांना सक्षम बनवणे.",
+                "btn_get_started": "सुरू करा",
+                "btn_learn_more": "तपशील पहा",
+                "section_why_agrosmart": "अॅग्रोस्मार्ट का निवडावे?",
+                "section_why_desc": "आधुनिक शेतकऱ्यासाठी तयार केलेली सर्वसमावेशक साधने.",
+                "feature_market": "बाजार विश्लेषण",
+                "feature_market_desc": "तुम्हाला योग्य वेळी विक्री करण्यास मदत करण्यासाठी रिअल-टाइम बाजार किमती आणि मागणी ट्रेंड.",
+                "feature_weather": "हवामान अंदाज",
+                "feature_weather_desc": "अंदाज न येणाऱ्या हवामानापासून तुमच्या पिकांचे संरक्षण करण्यासाठी अचूक हवामान अंदाज आणि सतर्कता.",
+                "feature_ai": "AI शिफारसी",
+                "feature_ai_desc": "तुमच्या मातीचा प्रकार, हंगाम आणि स्थानावर आधारित स्मार्ट पीक शिफारसी.",
+                "feature_calc": "नफा कॅल्क्युलेटर",
+                "feature_calc_desc": "बी पेरण्यापूर्वीच अर्थपूर्ण नफ्याचा अंदाज लावा.",
+                "impact_title": "भारतीय शेतकऱ्यांचे सक्षमीकरण",
+                "impact_desc": "अॅग्रोस्मार्ट तंत्रज्ञान आणि परंपरेतील अंतर कमी करते. आम्ही सहज, समजण्यास सोपा डेटा प्रदान करतो जो निर्णय घेण्यात मदत करतो, प्रत्येक कापणीसाठी शाश्वतता आणि नफा सुनिश्चित करतो.",
+                "impact_list_1": "डेटा-आधारित निर्णय घेणे",
+                "impact_list_2": "सरकारी योजनांपर्यंत पोहोच",
+                "impact_list_3": "समुदाय समर्थन आणि तज्ञ सल्ला",
+                "btn_join": "क्रांतीमध्ये सामील व्हा",
+                "footer_copyright": "© २०२६ अॅग्रोस्मार्ट इंक. सर्व हक्क राखीव."
+            },
+            hi: {
+                "landing_title": "एग्रोस्मार्ट - खेती का भविष्य",
+                "hero_title": "डेटा और AI के साथ खेती में क्रांति",
+                "hero_subtitle": "रियल-टाइम इनसाइट्स, बाजार ट्रेंड और स्मार्ट फसल प्रबंधन के साथ किसानों को सशक्त बनाना।",
+                "btn_get_started": "शुरू करें",
+                "btn_learn_more": "अधिक जानें",
+                "section_why_agrosmart": "एग्रोस्मार्ट क्यों चुनें?",
+                "section_why_desc": "आधुनिक किसान के लिए डिज़ाइन किए गए व्यापक उपकरण।",
+                "feature_market": "बाजार विश्लेषण",
+                "feature_market_desc": "आपको सही समय पर बेचने में मदद करने के लिए रियल-टाइम बाजार मूल्य और मांग ट्रेंड।",
+                "feature_weather": "मौसम की जानकारी",
+                "feature_weather_desc": "अप्रत्याशित स्थितियों से आपकी फसलों की रक्षा के लिए सटीक मौसम पूर्वानुमान और अलर्ट।",
+                "feature_ai": "AI सिफारिशें",
+                "feature_ai_desc": "आपकी मिट्टी के प्रकार, मौसम और स्थान के आधार पर स्मार्ट फसल सुझाव।",
+                "feature_calc": "लाभ कैलकुलेटर",
+                "feature_calc_desc": "बीज बोने से पहले ही सार्थक लाभ अनुमान की गणना करें।",
+                "impact_title": "भारतीय किसान को सशक्त बनाना",
+                "impact_desc": "एग्रोस्मार्ट तकनीक और परंपरा के बीच की खाई को पाटता है। हम सुलभ, समझने में आसान डेटा प्रदान करते हैं जो निर्णय लेने में सहायता करता है, हर फसल के लिए स्थिरता और लाभप्रदता सुनिश्चित करता है।",
+                "impact_list_1": "डेटा-संचालित निर्णय लेना",
+                "impact_list_2": "सरकारी योजनाओं तक पहुंच",
+                "impact_list_3": "सामुदायिक सहायता और विशेषज्ञ सलाह",
+                "btn_join": "क्रांति में शामिल हों",
+                "footer_copyright": "© २०२६ एग्रोस्मार्ट इंक. सर्वाधिकार सुरक्षित।"
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        function changeLandingLanguage(lang) {
+            currentLanguage = lang;
+
+            // Update buttons
+            document.querySelectorAll('.lang-btn-landing').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const activeBtn = document.getElementById(`btn-${lang}`);
+            if (activeBtn) activeBtn.classList.add('active');
+
+            // Update translations
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.dataset.translate;
+                if (translations[currentLanguage][key]) {
+                    if (el.tagName === 'TITLE') {
+                        document.title = translations[currentLanguage][key];
+                    } else {
+                        // Check if element has icons that should be preserved
+                        const icon = el.querySelector('i');
+                        if (icon) {
+                            el.innerHTML = translations[currentLanguage][key] + ' ' + icon.outerHTML;
+                        } else {
+                            el.textContent = translations[currentLanguage][key];
+                        }
+                    }
+                }
+            });
+
+            // Store preference
+            localStorage.setItem('agrosmart_lang', lang);
+        }
+
+        // Initialize from local storage or default
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('agrosmart_lang') || 'en';
+            changeLandingLanguage(savedLang);
+
+            // Scroll Animation Logic
+            const observerOptions = { threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('[data-aos]').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>
